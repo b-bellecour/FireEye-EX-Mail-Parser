@@ -1,0 +1,22 @@
+SHELL=/usr/bin/sh
+
+# Pointing to logfile
+LOGFILE=$HOME/log/procmail.log
+
+# Pointing the lockfile (You may need to create a new one)
+LOCKFILE=$HOME/.lockfile
+
+# Pointing mail directory
+MAILDIR=$HOME/Maildir/
+DEFAULT=$MAILDIR
+SENDMAIL=/usr/sbin/sendmail
+
+:0wc
+* ^Subject: Malware.*Object detected:
+| /home/nttdyb02/ex-xmlparser.py
+
+LOCKFILE		# removes any preexisting lockfile
+LOG=`lockfile $DEFAULT$LOCKEXT`
+TRAP="rm -f $DEFAULT$LOCKEXT"
+:0
+$DEFAULT
