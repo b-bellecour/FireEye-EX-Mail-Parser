@@ -45,7 +45,7 @@ sys.stderr = sl
 
 #Checking stdin
 if sys.stdin.isatty() != False:
-        logger.critical("ex-xmlparser.py(FireEye mail parser  script): Script exited, stdin is null, please open /home/nttdyb02/procmail.log, and check the latest log")
+        logger.critical("ex-xmlparser.py(FireEye mail parser  script): Script exited, stdin is null, please open /home/USERFOLDER/procmail.log, and check the latest log")
         sys.exit()
 
 #defining files,  and folder
