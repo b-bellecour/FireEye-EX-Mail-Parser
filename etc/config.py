@@ -31,7 +31,7 @@ class StreamToLogger(object):
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 formatter = logging.Formatter('%(asctime)s :: %(levelname)s :: %(message)s')
-file_handler = RotatingFileHandler('/home/nttdyb02/log/ex-xmlparser.log', 'a', 10000000, 10) #writing into /var/log/xmlparser.log | rotate logfile when it reach 10 mo | maximum number of log files : 10
+file_handler = RotatingFileHandler('/home/USERFOLDER/log/ex-xmlparser.log', 'a', 10000000, 10) #writing into /var/log/xmlparser.log | rotate logfile when it reach 10 mo | maximum number of log files : 10
 file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
 
@@ -49,9 +49,9 @@ if sys.stdin.isatty() != False:
         sys.exit()
 
 #defining files,  and folder
-conf_folder = "/home/nttdyb02/etc/"
-tmp_folder = "/home/nttdyb02/tmp/"
-debug_folder = "/home/nttdyb02/debug/"
+conf_folder = "/home/USERFOLDER/etc/"
+tmp_folder = "/home/USERFOLDER/tmp/"
+debug_folder = "/home/USERFOLDER/debug/"
 now = datetime.now()
 printdate = now.strftime("%Y-%m-%d_%Hh%Mm%S.%fs")                           #defining time for file creation
 parsed_xml = open(debug_folder + printdate + '-formated.xml','w')           #defining the the xml file which will be parsed.
