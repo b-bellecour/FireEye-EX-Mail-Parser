@@ -13,7 +13,7 @@ SENDMAIL=/usr/sbin/sendmail
 
 :0wc
 * ^Subject: Malware.*Object detected:
-| /home/USERDIRECTORY/ex-xmlparser.py
+| /home/USERFOLDER/ex-xmlparser.py
 
 LOCKFILE		# removes any preexisting lockfile
 LOG=`lockfile $DEFAULT$LOCKEXT`
