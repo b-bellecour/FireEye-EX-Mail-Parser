@@ -20,7 +20,6 @@ This script goal is to:
 - pip install tzlocal
 - pip install pytz
 
-
 ## Usage
 
 ### 1 - configuring procmail and postfix
@@ -39,13 +38,10 @@ This script goal is to:
 - Set the USERFOLDER below ^Subject: Malware.*Object detected:
 
 
-### 4 - Parsing the json file to a human/splunk friendly file
+### 4 - Customizing template mail
+- Edit etc/atama.conf(SMTP Header) The destination mail address written there are just for display puprose. No impact on sending.
+- Edit etc/body.conf Customize your mail body the way you want.
 
-- parse.py 2017-10-XX-website-1.json (Can only parse json file created by the first script export_incap.py)
-- The output will a txt file, Parsing events into incidents ( One event can contain multiple incidents)
+### 5 - How does it works
 
-### 4 - Sample files
-
-- You can find one .json sample which is the Output of export_incap.py You can parse it with parsed.py.
-
-- You can find 2017-10-XX-website-1.txt, which is the output of parsed.py.
+You just have to configure the file above properly, then ex-xmlparser.py will be automaticly kicked by .procmail.rc when a fireEye EX incident mail reach the monitored folder. ex-xmlparser.py will parse the XML file then send a custom mail to the desired destination addresses.
