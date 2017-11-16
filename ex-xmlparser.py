@@ -8,6 +8,16 @@ from etc.config import *
 
 #---------------------prog start------------------------#
 
+#     	        _/_/_/    _/_/_/    _/_/_/_/                     
+#     	       _/    _/  _/    _/  _/                            
+#     	      _/_/_/    _/_/_/    _/_/_/                         
+#     	     _/    _/  _/    _/  _/                              
+#     	    _/_/_/    _/_/_/    _/_/_/_/                         
+# 		 			                   	
+#       	Baptiste Bellecour 2017	                   
+#					                   
+# 	       FireEye EX email/xml parser 
+
 #transforming the original FireEye mail into a parsable xml file
 formating = standard_input
 w = parsed_xml
